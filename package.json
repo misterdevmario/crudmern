@@ -1,0 +1,34 @@
+{
+  "name": "merncrud",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/misterdevmario/crudmern.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/misterdevmario/crudmern/issues"
+  },
+  "homepage": "https://github.com/misterdevmario/crudmern#readme",
+  "dependencies": {
+    "cloudinary": "^1.32.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.1",
+    "express-fileupload": "^1.4.0",
+    "fs-extra": "^10.1.0",
+    "http-errors": "^2.0.0",
+    "mongoose": "^6.6.5",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
