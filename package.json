@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon server"
+    "dev": "nodemon server --ignore client"
   },
   "repository": {
     "type": "git",
@@ -20,13 +20,15 @@
   "homepage": "https://github.com/misterdevmario/crudmern#readme",
   "dependencies": {
     "cloudinary": "^1.32.0",
+    "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.1",
     "express-fileupload": "^1.4.0",
     "fs-extra": "^10.1.0",
     "http-errors": "^2.0.0",
     "mongoose": "^6.6.5",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "react-router-dom": "^6.4.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"

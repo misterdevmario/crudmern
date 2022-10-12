@@ -15,7 +15,7 @@ export const createPost = async (req, res) => {
   try {
     const { title, desc } = req.body;
     let image;
-    if (req.files.image) {
+    if (req.files?.image) {
       const result = await uploadImage(req.files.image.tempFilePath);
       await fs.remove(req.files.image.tempFilePath);
       image = {
@@ -39,7 +39,7 @@ export const updatePost = async (req, res) => {
       await deleteImage(updateImage.image.public_id);
     }
 
-    if (req.files.image) {
+    if (req.files?.image) {
       const result = await uploadImage(req.files.image.tempFilePath);
       await fs.remove(req.files.image.tempFilePath);
       req.body.image = {
