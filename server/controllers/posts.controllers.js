@@ -22,7 +22,6 @@ export const createPost = async (req, res) => {
         url: result.secure_url,
         public_id: result.public_id,
       };
-      console.log(result);
     }
     const newPost = new Post({ title, desc, image });
     await newPost.save();
@@ -60,12 +59,12 @@ export const updatePost = async (req, res) => {
 export const deletePost = async (req, res) => {
   try {
     const postRemoved = await Post.findByIdAndRemove(req.params.id);
-    if (!postRemoved) return res.sendStatus(404);
+    if (!postRemoved) return res.status(404);
     if (postRemoved.image.public_id) {
       await deleteImage(postRemoved.image.public_id);
     }
 
-    return res.json(postRemoved);
+    return res.status(204).json(postRemoved);
   } catch (error) {
     return res.status(500).json({ message: error.message });
   }
